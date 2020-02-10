@@ -11,8 +11,10 @@ import Foundation
 struct Constants {
     
     struct Storyboard {
-        
+        //a constant for homeVC storyboard name
         static let homeViewController = "HomeVC"
+        static let tabController = "TabBarVC"
+        static let navigationViewController = "NavigationVC"
         
     }
     

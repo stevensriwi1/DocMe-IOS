@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tfG-Kd-qCZ">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,1444 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DocMe1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Ooi-8b-YFX">
+                                <rect key="frame" x="50" y="692" width="314" height="120"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7RL-Tn-DYb">
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="rse-aI-Wx9"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="Login"/>
+                                        <variation key="heightClass=compact-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        </variation>
+                                        <connections>
+                                            <segue destination="bhV-Pj-ZPe" kind="show" id="UBA-Nm-BLx"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="47x-hI-rfj">
+                                        <rect key="frame" x="0.0" y="70" width="314" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="Sign Up"/>
+                                        <variation key="heightClass=compact-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        </variation>
+                                        <connections>
+                                            <segue destination="CO0-jX-ptB" kind="show" id="6FT-6V-8BY"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="47x-hI-rfj" firstAttribute="height" secondItem="7RL-Tn-DYb" secondAttribute="height" id="eK7-fv-j9m"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7A0-xq-fVA">
+                                <rect key="frame" x="50" y="94" width="314" height="35"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DocMe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fHe-qK-2q0">
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="35"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="29"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=compact-widthClass=compact">
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="29"/>
+                                        </variation>
+                                        <variation key="heightClass=compact-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="29"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="65"/>
+                                        </variation>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="7A0-xq-fVA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="7Jx-17-kbe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ooi-8b-YFX" secondAttribute="trailing" constant="50" id="E5F-aC-uRW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ooi-8b-YFX" secondAttribute="bottom" constant="50" id="NIv-tf-Mna"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7A0-xq-fVA" secondAttribute="trailing" constant="50" id="Trw-M4-y7d"/>
+                            <constraint firstItem="7A0-xq-fVA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="lYm-Ab-hAl"/>
+                            <constraint firstItem="Ooi-8b-YFX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="zsx-et-TOr"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="5W0-JD-GRQ"/>
+                    <connections>
+                        <outlet property="loginButton" destination="7RL-Tn-DYb" id="oZO-TC-xM5"/>
+                        <outlet property="signUpButton" destination="47x-hI-rfj" id="SiQ-6C-ejv"/>
+                        <outlet property="titleLabel" destination="fHe-qK-2q0" id="5s0-9M-1HZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1347.8260869565217" y="-84.375"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="0NC-DJ-2AM">
+            <objects>
+                <viewController id="HhE-VP-LuW" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ip5-vg-Mlm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p1X-jH-waA">
+                                <rect key="frame" x="20" y="94" width="200" height="80"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_account_circle3x.png" translatesAutoresizingMaskIntoConstraints="NO" id="rP4-PT-99x">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="Mde-WK-vRt">
+                                                <variation key="heightClass=compact-widthClass=compact" constant="100"/>
+                                                <variation key="heightClass=compact-widthClass=regular" constant="80"/>
+                                                <variation key="heightClass=regular-widthClass=compact" constant="80"/>
+                                                <variation key="heightClass=regular-widthClass=regular" constant="200"/>
+                                            </constraint>
+                                            <constraint firstAttribute="width" constant="100" id="s0J-rr-Xa9">
+                                                <variation key="heightClass=compact-widthClass=compact" constant="100"/>
+                                                <variation key="heightClass=compact-widthClass=regular" constant="100"/>
+                                                <variation key="heightClass=regular-widthClass=compact" constant="80"/>
+                                                <variation key="heightClass=regular-widthClass=regular" constant="200"/>
+                                            </constraint>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="John Murphy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I9x-2y-nGI">
+                                        <rect key="frame" x="80" y="0.0" width="120" height="80"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                        </variation>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Gfc-BY-tgj">
+                                        <variation key="heightClass=compact-widthClass=compact" constant="100"/>
+                                        <variation key="heightClass=compact-widthClass=regular" constant="80"/>
+                                        <variation key="heightClass=regular-widthClass=compact" constant="80"/>
+                                        <variation key="heightClass=regular-widthClass=regular" constant="200"/>
+                                    </constraint>
+                                    <constraint firstItem="rP4-PT-99x" firstAttribute="top" secondItem="p1X-jH-waA" secondAttribute="top" id="LJU-T7-ARw"/>
+                                    <constraint firstItem="rP4-PT-99x" firstAttribute="leading" secondItem="p1X-jH-waA" secondAttribute="leading" id="M89-Vx-7iq"/>
+                                    <constraint firstAttribute="width" constant="500" id="rY7-TX-80N">
+                                        <variation key="heightClass=compact-widthClass=compact" constant="500"/>
+                                        <variation key="heightClass=regular-widthClass=compact" constant="200"/>
+                                        <variation key="heightClass=regular-widthClass=regular" constant="700"/>
+                                    </constraint>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ua8-Mc-VyT">
+                                <rect key="frame" x="20" y="194" width="193" height="80"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_account_circle3x.png" translatesAutoresizingMaskIntoConstraints="NO" id="ukX-9f-eLO">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="AFE-oy-sAw">
+                                                <variation key="heightClass=compact-widthClass=compact" constant="100"/>
+                                                <variation key="heightClass=compact-widthClass=regular" constant="100"/>
+                                                <variation key="heightClass=regular-widthClass=compact" constant="80"/>
+                                                <variation key="heightClass=regular-widthClass=regular" constant="200"/>
+                                            </constraint>
+                                            <constraint firstAttribute="height" constant="100" id="uoS-6F-5Pl">
+                                                <variation key="heightClass=compact-widthClass=compact" constant="100"/>
+                                                <variation key="heightClass=compact-widthClass=regular" constant="80"/>
+                                                <variation key="heightClass=regular-widthClass=compact" constant="80"/>
+                                                <variation key="heightClass=regular-widthClass=regular" constant="200"/>
+                                            </constraint>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Steven Sriwi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sR9-u8-do0">
+                                        <rect key="frame" x="80" y="0.0" width="113" height="80"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                        </variation>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ukX-9f-eLO" firstAttribute="leading" secondItem="Ua8-Mc-VyT" secondAttribute="leading" id="dmP-ri-gij"/>
+                                    <constraint firstItem="ukX-9f-eLO" firstAttribute="top" secondItem="Ua8-Mc-VyT" secondAttribute="top" id="e6N-m4-dfC"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Ua8-Mc-VyT" firstAttribute="width" secondItem="p1X-jH-waA" secondAttribute="width" multiplier="0.963989" id="3dc-fT-bNj"/>
+                            <constraint firstItem="Ua8-Mc-VyT" firstAttribute="top" secondItem="p1X-jH-waA" secondAttribute="bottom" constant="20" id="RRX-eR-x1v">
+                                <variation key="heightClass=compact-widthClass=regular" constant="24"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="20"/>
+                            </constraint>
+                            <constraint firstItem="p1X-jH-waA" firstAttribute="top" secondItem="nei-zc-jxL" secondAttribute="top" constant="50" id="dfz-8A-3yz">
+                                <variation key="heightClass=compact-widthClass=regular" constant="50"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                            </constraint>
+                            <constraint firstItem="Ua8-Mc-VyT" firstAttribute="leading" secondItem="nei-zc-jxL" secondAttribute="leading" constant="20" id="hrb-LK-787">
+                                <variation key="heightClass=compact-widthClass=regular" constant="20"/>
+                            </constraint>
+                            <constraint firstItem="Ua8-Mc-VyT" firstAttribute="height" secondItem="p1X-jH-waA" secondAttribute="height" id="mkH-PF-TjC"/>
+                            <constraint firstItem="p1X-jH-waA" firstAttribute="leading" secondItem="nei-zc-jxL" secondAttribute="leading" constant="20" id="sO8-0V-R1r">
+                                <variation key="heightClass=compact-widthClass=regular" constant="20"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="20"/>
+                            </constraint>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nei-zc-jxL"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="pQD-zz-WS6"/>
+                    <connections>
+                        <outlet property="testing" destination="I9x-2y-nGI" id="C3J-zi-TJq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nXv-fK-3bb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4719" y="926"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="5pK-pU-uem">
+            <objects>
+                <tableViewController storyboardIdentifier="HomeVC" id="Tiy-LZ-3h5" customClass="HomeViewController" customModule="DocMe1" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="liS-md-iNp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="zpN-Fq-FUv">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zpN-Fq-FUv" id="VZQ-fg-gg6">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Tiy-LZ-3h5" id="JZP-1L-Y7z"/>
+                            <outlet property="delegate" destination="Tiy-LZ-3h5" id="X3t-bW-nIe"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="DTk-9U-51B"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q8c-Mk-C4H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4719" y="246"/>
+        </scene>
+        <!--Article View Controller-->
+        <scene sceneID="osP-kO-t9A">
+            <objects>
+                <viewController id="LDB-it-ZDT" customClass="ArticleViewController" customModule="DocMe1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="maL-OW-ScA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3hd-jr-z2y">
+                                <rect key="frame" x="2" y="78" width="410" height="150"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="health" translatesAutoresizingMaskIntoConstraints="NO" id="zOf-ug-7EX">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="FGf-wb-URL">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="150"/>
+                                                <variation key="heightClass=regular-widthClass=regular" constant="300"/>
+                                            </constraint>
+                                            <constraint firstAttribute="height" constant="150" id="KS9-8Y-Njc">
+                                                <variation key="heightClass=compact-widthClass=regular" constant="150"/>
+                                                <variation key="heightClass=regular-widthClass=compact" constant="150"/>
+                                                <variation key="heightClass=regular-widthClass=regular" constant="300"/>
+                                            </constraint>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="HCy-Kc-fhY">
+                                        <rect key="frame" x="150" y="0.0" width="260" height="150"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="How to make your day abit healthier" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kAo-4H-y5W">
+                                                <rect key="frame" x="0.0" y="0.0" width="260" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="150" id="xCt-et-LkR">
+                                                        <variation key="heightClass=regular-widthClass=compact" constant="100"/>
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="150"/>
+                                                    </constraint>
+                                                </constraints>
+                                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="33"/>
+                                                </variation>
+                                            </textView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c2R-K5-KVj">
+                                                <rect key="frame" x="0.0" y="100" width="260" height="50"/>
+                                                <state key="normal" title="Read More"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                </variation>
+                                                <connections>
+                                                    <segue destination="hjc-qu-Hjj" kind="show" id="N5K-2T-G3d"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="500" id="D2J-tN-ZdG">
+                                        <variation key="heightClass=compact-widthClass=regular" constant="500"/>
+                                        <variation key="heightClass=regular-widthClass=compact" constant="410"/>
+                                        <variation key="heightClass=regular-widthClass=regular" constant="990"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="200" id="ExE-7g-yCv">
+                                        <variation key="heightClass=compact-widthClass=regular" constant="150"/>
+                                        <variation key="heightClass=regular-widthClass=compact" constant="150"/>
+                                        <variation key="heightClass=regular-widthClass=regular" constant="300"/>
+                                    </constraint>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q41-Tn-zbI">
+                                <rect key="frame" x="2" y="328" width="410" height="150"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="health2" translatesAutoresizingMaskIntoConstraints="NO" id="idW-99-vu1">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="B8b-da-qIJ">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="150"/>
+                                                <variation key="heightClass=regular-widthClass=regular" constant="300"/>
+                                            </constraint>
+                                            <constraint firstAttribute="height" constant="150" id="dSX-cu-MIs">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="150"/>
+                                                <variation key="heightClass=regular-widthClass=regular" constant="300"/>
+                                            </constraint>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="3Sh-4f-JxW">
+                                        <rect key="frame" x="150" y="0.0" width="260" height="150"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Gainning more strength after cancer" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="iZc-7w-6Li">
+                                                <rect key="frame" x="0.0" y="0.0" width="260" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="150" id="3hN-V9-6lN">
+                                                        <variation key="heightClass=regular-widthClass=compact" constant="100"/>
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="150"/>
+                                                    </constraint>
+                                                </constraints>
+                                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="33"/>
+                                                </variation>
+                                            </textView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zmD-Lp-gYa">
+                                                <rect key="frame" x="0.0" y="100" width="260" height="50"/>
+                                                <state key="normal" title="Read More"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                </variation>
+                                                <connections>
+                                                    <segue destination="T7X-m4-uzT" kind="show" id="IxH-ja-P0w"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="500" id="Kzv-7Q-hMU">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="410"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="150" id="ViD-rE-wMG">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="150"/>
+                                    </constraint>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Ox-Lv-DFM">
+                                <rect key="frame" x="2" y="578" width="410" height="150"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="health" translatesAutoresizingMaskIntoConstraints="NO" id="Pe9-go-PLd">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="tb5-eq-wtO">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="150"/>
+                                                <variation key="heightClass=regular-widthClass=regular" constant="300"/>
+                                            </constraint>
+                                            <constraint firstAttribute="height" constant="150" id="xOB-ff-nCT">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="150"/>
+                                                <variation key="heightClass=regular-widthClass=regular" constant="300"/>
+                                            </constraint>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="frE-Gu-YsI">
+                                        <rect key="frame" x="150" y="0.0" width="260" height="150"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="5 Vegetable That Boosts Your Immunity" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Int-uR-U0o">
+                                                <rect key="frame" x="0.0" y="0.0" width="260" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="Xes-Mq-fTn">
+                                                        <variation key="heightClass=regular-widthClass=compact" constant="100"/>
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="150"/>
+                                                    </constraint>
+                                                </constraints>
+                                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="33"/>
+                                                </variation>
+                                            </textView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tJJ-22-c9h">
+                                                <rect key="frame" x="0.0" y="100" width="260" height="50"/>
+                                                <state key="normal" title="Read More"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                </variation>
+                                                <connections>
+                                                    <segue destination="fVA-MO-qVa" kind="show" id="9Xf-ZG-sOQ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="Bnu-Yc-zrY">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="150"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="500" id="XqC-lr-yy9">
+                                        <variation key="heightClass=compact-widthClass=regular" constant="500"/>
+                                        <variation key="heightClass=regular-widthClass=compact" constant="410"/>
+                                    </constraint>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Q41-Tn-zbI" firstAttribute="width" secondItem="3hd-jr-z2y" secondAttribute="width" id="AhR-kN-4QC"/>
+                            <constraint firstItem="4Ox-Lv-DFM" firstAttribute="top" secondItem="Q41-Tn-zbI" secondAttribute="bottom" constant="100" id="D1m-on-h3h"/>
+                            <constraint firstItem="4Ox-Lv-DFM" firstAttribute="width" secondItem="Q41-Tn-zbI" secondAttribute="width" id="Ht5-OY-XK5"/>
+                            <constraint firstItem="3hd-jr-z2y" firstAttribute="top" secondItem="maL-OW-ScA" secondAttribute="top" constant="78" id="Ppl-g1-XfB"/>
+                            <constraint firstItem="Q41-Tn-zbI" firstAttribute="leading" secondItem="LrN-MD-8Xj" secondAttribute="leading" constant="2" id="Vby-wD-bce"/>
+                            <constraint firstItem="LrN-MD-8Xj" firstAttribute="trailing" secondItem="Q41-Tn-zbI" secondAttribute="trailing" constant="2" id="WD8-7R-GVI"/>
+                            <constraint firstItem="LrN-MD-8Xj" firstAttribute="trailing" secondItem="3hd-jr-z2y" secondAttribute="trailing" constant="2" id="Zd8-Uy-rss"/>
+                            <constraint firstItem="4Ox-Lv-DFM" firstAttribute="leading" secondItem="LrN-MD-8Xj" secondAttribute="leading" constant="2" id="bBL-Ug-xnR"/>
+                            <constraint firstItem="3hd-jr-z2y" firstAttribute="leading" secondItem="maL-OW-ScA" secondAttribute="leading" constant="46" id="eHn-3B-Lq8">
+                                <variation key="heightClass=compact-widthClass=regular" constant="46"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="2"/>
+                            </constraint>
+                            <constraint firstItem="LrN-MD-8Xj" firstAttribute="trailing" secondItem="4Ox-Lv-DFM" secondAttribute="trailing" constant="2" id="mQD-l5-4mE"/>
+                            <constraint firstItem="Q41-Tn-zbI" firstAttribute="height" secondItem="3hd-jr-z2y" secondAttribute="height" id="tTL-U0-Ntn"/>
+                            <constraint firstItem="Q41-Tn-zbI" firstAttribute="top" secondItem="3hd-jr-z2y" secondAttribute="bottom" constant="100" id="xtW-9u-8dr"/>
+                            <constraint firstItem="4Ox-Lv-DFM" firstAttribute="height" secondItem="Q41-Tn-zbI" secondAttribute="height" id="zxK-bz-IQf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LrN-MD-8Xj"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="gL3-Ne-7ew"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wAG-Am-dK7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4828.985507246377" y="-423.21428571428572"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="3AY-gM-hED">
+            <objects>
+                <viewController id="T7X-m4-uzT" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="D1e-ab-GqV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="KNT-Za-Cdm">
+                                <rect key="frame" x="17" y="100" width="380" height="485"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mh7-YP-MI7">
+                                        <rect key="frame" x="0.0" y="0.0" width="380" height="95"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="health2" translatesAutoresizingMaskIntoConstraints="NO" id="bqz-Gt-U41">
+                                                <rect key="frame" x="0.0" y="0.0" width="160" height="95"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="210" id="fE5-8D-3A4">
+                                                        <variation key="heightClass=compact-widthClass=regular" constant="210"/>
+                                                        <variation key="heightClass=regular-widthClass=compact" constant="95"/>
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="210"/>
+                                                    </constraint>
+                                                    <constraint firstAttribute="width" constant="170" id="sdI-GG-mFM">
+                                                        <variation key="heightClass=compact-widthClass=regular" constant="200"/>
+                                                        <variation key="heightClass=regular-widthClass=compact" constant="160"/>
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="200"/>
+                                                    </constraint>
+                                                </constraints>
+                                            </imageView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="5 Vegetable That Boosts Your Immunity" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="luw-hO-rFx">
+                                                <rect key="frame" x="160" y="0.0" width="220" height="95"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="210" id="Yc4-bF-qz5">
+                                                        <variation key="heightClass=compact-widthClass=regular" constant="210"/>
+                                                        <variation key="heightClass=regular-widthClass=compact" constant="95"/>
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="210"/>
+                                                    </constraint>
+                                                    <constraint firstAttribute="width" constant="300" id="ywZ-8B-5l4">
+                                                        <variation key="heightClass=compact-widthClass=regular" constant="600"/>
+                                                        <variation key="heightClass=regular-widthClass=compact" constant="220"/>
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="790"/>
+                                                    </constraint>
+                                                </constraints>
+                                                <color key="textColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="italicSystem" pointSize="19"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="italicSystem" pointSize="35"/>
+                                                </variation>
+                                            </textView>
+                                        </subviews>
+                                    </stackView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nA2-Gk-H3P">
+                                        <rect key="frame" x="0.0" y="95" width="380" height="390"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="990" id="PcT-H8-X1o">
+                                                <variation key="heightClass=compact-widthClass=regular" constant="800"/>
+                                                <variation key="heightClass=regular-widthClass=compact" constant="380"/>
+                                                <variation key="heightClass=regular-widthClass=regular" constant="990"/>
+                                            </constraint>
+                                            <constraint firstAttribute="height" constant="390" id="Zbq-zz-sl2">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="390"/>
+                                                <variation key="heightClass=regular-widthClass=regular" constant="390"/>
+                                            </constraint>
+                                        </constraints>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Mh7-YP-MI7" firstAttribute="leading" secondItem="KNT-Za-Cdm" secondAttribute="leading" id="1gd-5U-Zkn"/>
+                                    <constraint firstItem="Mh7-YP-MI7" firstAttribute="top" secondItem="KNT-Za-Cdm" secondAttribute="top" id="383-pO-g9n"/>
+                                    <constraint firstAttribute="trailing" secondItem="Mh7-YP-MI7" secondAttribute="trailing" id="7US-HB-Zc0"/>
+                                    <constraint firstAttribute="trailing" secondItem="Mh7-YP-MI7" secondAttribute="trailing" id="EDX-H7-tRI"/>
+                                    <constraint firstAttribute="height" constant="600" id="PQR-HX-rfU">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="485"/>
+                                        <variation key="heightClass=regular-widthClass=regular" constant="600"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="990" id="c2W-12-Vxi">
+                                        <variation key="heightClass=compact-widthClass=regular" constant="800"/>
+                                        <variation key="heightClass=regular-widthClass=compact" constant="380"/>
+                                        <variation key="heightClass=regular-widthClass=regular" constant="990"/>
+                                    </constraint>
+                                    <constraint firstItem="Mh7-YP-MI7" firstAttribute="top" secondItem="KNT-Za-Cdm" secondAttribute="top" id="xHV-kx-xlh"/>
+                                    <constraint firstItem="Mh7-YP-MI7" firstAttribute="leading" secondItem="KNT-Za-Cdm" secondAttribute="leading" id="y3s-qr-KbK"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hlZ-65-2LW" firstAttribute="trailing" secondItem="KNT-Za-Cdm" secondAttribute="trailing" constant="17" id="OsC-Dl-tCD">
+                                <variation key="heightClass=compact-widthClass=compact" constant="17"/>
+                                <variation key="heightClass=compact-widthClass=regular" constant="17"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="17"/>
+                                <variation key="heightClass=regular-widthClass=regular" constant="17"/>
+                            </constraint>
+                            <constraint firstItem="KNT-Za-Cdm" firstAttribute="top" secondItem="D1e-ab-GqV" secondAttribute="top" constant="100" id="hhS-70-f7M">
+                                <variation key="heightClass=compact-widthClass=compact" constant="100"/>
+                                <variation key="heightClass=compact-widthClass=regular" constant="100"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="100"/>
+                                <variation key="heightClass=regular-widthClass=regular" constant="100"/>
+                            </constraint>
+                            <constraint firstItem="KNT-Za-Cdm" firstAttribute="leading" secondItem="hlZ-65-2LW" secondAttribute="leading" constant="17" id="xaW-ff-APv">
+                                <variation key="heightClass=compact-widthClass=compact" constant="17"/>
+                                <variation key="heightClass=compact-widthClass=regular" constant="17"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="17"/>
+                                <variation key="heightClass=regular-widthClass=regular" constant="17"/>
+                            </constraint>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hlZ-65-2LW"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="tIf-Iq-IUl"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DEy-G7-7ea" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5784.057971014493" y="-423.21428571428572"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="DQ0-Bw-Lpx">
+            <objects>
+                <viewController id="fVA-MO-qVa" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wqA-n2-kSx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="KmN-KH-ex5">
+                                <rect key="frame" x="17" y="100" width="380" height="485"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K7D-nd-txj">
+                                        <rect key="frame" x="0.0" y="0.0" width="380" height="95"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="health" translatesAutoresizingMaskIntoConstraints="NO" id="BRv-9f-WBt">
+                                                <rect key="frame" x="0.0" y="0.0" width="160" height="95"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="210" id="s0r-v3-lqb">
+                                                        <variation key="heightClass=compact-widthClass=regular" constant="210"/>
+                                                        <variation key="heightClass=regular-widthClass=compact" constant="95"/>
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="210"/>
+                                                    </constraint>
+                                                    <constraint firstAttribute="width" constant="170" id="w4f-Hn-n51">
+                                                        <variation key="heightClass=compact-widthClass=regular" constant="200"/>
+                                                        <variation key="heightClass=regular-widthClass=compact" constant="160"/>
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="200"/>
+                                                    </constraint>
+                                                </constraints>
+                                            </imageView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="5 Vegetable That Boosts Your Immunity" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Jwg-Me-SkK">
+                                                <rect key="frame" x="160" y="0.0" width="220" height="95"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="210" id="OlW-hg-A2z">
+                                                        <variation key="heightClass=compact-widthClass=regular" constant="210"/>
+                                                        <variation key="heightClass=regular-widthClass=compact" constant="95"/>
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="210"/>
+                                                    </constraint>
+                                                    <constraint firstAttribute="width" constant="300" id="Tmz-3b-dGE">
+                                                        <variation key="heightClass=compact-widthClass=regular" constant="600"/>
+                                                        <variation key="heightClass=regular-widthClass=compact" constant="220"/>
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="790"/>
+                                                    </constraint>
+                                                </constraints>
+                                                <color key="textColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="italicSystem" pointSize="19"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="italicSystem" pointSize="35"/>
+                                                </variation>
+                                            </textView>
+                                        </subviews>
+                                    </stackView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qiM-s4-xWE">
+                                        <rect key="frame" x="0.0" y="95" width="380" height="390"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="990" id="Sxo-At-5da">
+                                                <variation key="heightClass=compact-widthClass=regular" constant="800"/>
+                                                <variation key="heightClass=regular-widthClass=compact" constant="380"/>
+                                                <variation key="heightClass=regular-widthClass=regular" constant="990"/>
+                                            </constraint>
+                                            <constraint firstAttribute="height" constant="390" id="tjW-pU-hg7">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="390"/>
+                                                <variation key="heightClass=regular-widthClass=regular" constant="390"/>
+                                            </constraint>
+                                        </constraints>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="K7D-nd-txj" firstAttribute="leading" secondItem="KmN-KH-ex5" secondAttribute="leading" id="45m-m9-Ooz"/>
+                                    <constraint firstItem="K7D-nd-txj" firstAttribute="leading" secondItem="KmN-KH-ex5" secondAttribute="leading" id="P8F-62-PdG"/>
+                                    <constraint firstAttribute="trailing" secondItem="K7D-nd-txj" secondAttribute="trailing" id="Syl-Gm-ylM"/>
+                                    <constraint firstItem="K7D-nd-txj" firstAttribute="top" secondItem="KmN-KH-ex5" secondAttribute="top" id="Y36-4i-9Jm"/>
+                                    <constraint firstAttribute="trailing" secondItem="K7D-nd-txj" secondAttribute="trailing" id="ZwS-UL-77y"/>
+                                    <constraint firstAttribute="width" constant="990" id="kJN-6z-6Cb">
+                                        <variation key="heightClass=compact-widthClass=regular" constant="800"/>
+                                        <variation key="heightClass=regular-widthClass=compact" constant="380"/>
+                                        <variation key="heightClass=regular-widthClass=regular" constant="990"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="600" id="ktN-r3-g0R">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="485"/>
+                                        <variation key="heightClass=regular-widthClass=regular" constant="600"/>
+                                    </constraint>
+                                    <constraint firstItem="K7D-nd-txj" firstAttribute="top" secondItem="KmN-KH-ex5" secondAttribute="top" id="ySb-SP-53f"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="KmN-KH-ex5" firstAttribute="leading" secondItem="Ptf-Mt-OOV" secondAttribute="leading" constant="17" id="82N-cR-wY7">
+                                <variation key="heightClass=regular-widthClass=compact" constant="17"/>
+                                <variation key="heightClass=regular-widthClass=regular" constant="17"/>
+                            </constraint>
+                            <constraint firstItem="Ptf-Mt-OOV" firstAttribute="trailing" secondItem="KmN-KH-ex5" secondAttribute="trailing" constant="17" id="Hd2-nP-Fdm">
+                                <variation key="heightClass=regular-widthClass=compact" constant="17"/>
+                                <variation key="heightClass=regular-widthClass=regular" constant="17"/>
+                            </constraint>
+                            <constraint firstItem="KmN-KH-ex5" firstAttribute="top" secondItem="wqA-n2-kSx" secondAttribute="top" constant="100" id="YnQ-8M-N7a">
+                                <variation key="heightClass=compact-widthClass=compact" constant="100"/>
+                                <variation key="heightClass=compact-widthClass=regular" constant="100"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="100"/>
+                                <variation key="heightClass=regular-widthClass=regular" constant="100"/>
+                            </constraint>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ptf-Mt-OOV"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Pxd-QR-f8g"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jPN-Qv-lQr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6508.6956521739139" y="284.59821428571428"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="sqJ-Vv-KJM">
+            <objects>
+                <viewController id="hjc-qu-Hjj" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zaE-6H-P2Y">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="tij-QK-ABD">
+                                <rect key="frame" x="17" y="100" width="380" height="485"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WmS-Tm-jeQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="380" height="95"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="health" translatesAutoresizingMaskIntoConstraints="NO" id="JgG-ya-vUx">
+                                                <rect key="frame" x="0.0" y="0.0" width="160" height="95"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="170" id="HtW-ai-uPm">
+                                                        <variation key="heightClass=compact-widthClass=regular" constant="200"/>
+                                                        <variation key="heightClass=regular-widthClass=compact" constant="160"/>
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="200"/>
+                                                    </constraint>
+                                                    <constraint firstAttribute="height" constant="210" id="gyJ-0B-feq">
+                                                        <variation key="heightClass=compact-widthClass=regular" constant="210"/>
+                                                        <variation key="heightClass=regular-widthClass=compact" constant="95"/>
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="210"/>
+                                                    </constraint>
+                                                </constraints>
+                                            </imageView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="5 Vegetable That Boosts Your Immunity" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WgX-Kz-CkD">
+                                                <rect key="frame" x="160" y="0.0" width="220" height="95"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="300" id="QNl-Rc-qO4">
+                                                        <variation key="heightClass=compact-widthClass=regular" constant="600"/>
+                                                        <variation key="heightClass=regular-widthClass=compact" constant="220"/>
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="790"/>
+                                                    </constraint>
+                                                    <constraint firstAttribute="height" constant="210" id="yX5-b8-FaK">
+                                                        <variation key="heightClass=compact-widthClass=regular" constant="210"/>
+                                                        <variation key="heightClass=regular-widthClass=compact" constant="95"/>
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="210"/>
+                                                    </constraint>
+                                                </constraints>
+                                                <color key="textColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="italicSystem" pointSize="19"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="italicSystem" pointSize="35"/>
+                                                </variation>
+                                            </textView>
+                                        </subviews>
+                                    </stackView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bxN-yU-uiu">
+                                        <rect key="frame" x="0.0" y="95" width="380" height="390"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="990" id="PiZ-UQ-Trl">
+                                                <variation key="heightClass=compact-widthClass=regular" constant="800"/>
+                                                <variation key="heightClass=regular-widthClass=compact" constant="380"/>
+                                                <variation key="heightClass=regular-widthClass=regular" constant="990"/>
+                                            </constraint>
+                                            <constraint firstAttribute="height" constant="390" id="fER-yv-7dL">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="390"/>
+                                                <variation key="heightClass=regular-widthClass=regular" constant="390"/>
+                                            </constraint>
+                                        </constraints>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="WmS-Tm-jeQ" secondAttribute="trailing" id="9ZI-QV-ckh"/>
+                                    <constraint firstAttribute="height" constant="600" id="RI0-Tn-fXA">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="485"/>
+                                        <variation key="heightClass=regular-widthClass=regular" constant="600"/>
+                                    </constraint>
+                                    <constraint firstItem="WmS-Tm-jeQ" firstAttribute="top" secondItem="tij-QK-ABD" secondAttribute="top" id="eKw-5z-Lht"/>
+                                    <constraint firstItem="WmS-Tm-jeQ" firstAttribute="leading" secondItem="tij-QK-ABD" secondAttribute="leading" id="jmo-jP-d2x"/>
+                                    <constraint firstAttribute="trailing" secondItem="WmS-Tm-jeQ" secondAttribute="trailing" id="k8b-ar-rg8"/>
+                                    <constraint firstAttribute="width" constant="990" id="pDl-ML-Dqi">
+                                        <variation key="heightClass=compact-widthClass=regular" constant="800"/>
+                                        <variation key="heightClass=regular-widthClass=compact" constant="380"/>
+                                        <variation key="heightClass=regular-widthClass=regular" constant="990"/>
+                                    </constraint>
+                                    <constraint firstItem="WmS-Tm-jeQ" firstAttribute="leading" secondItem="tij-QK-ABD" secondAttribute="leading" id="rkw-5R-8aS"/>
+                                    <constraint firstItem="WmS-Tm-jeQ" firstAttribute="top" secondItem="tij-QK-ABD" secondAttribute="top" id="xg0-59-Eu1"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tij-QK-ABD" firstAttribute="top" secondItem="zaE-6H-P2Y" secondAttribute="top" constant="100" id="50M-cu-57d">
+                                <variation key="heightClass=compact-widthClass=compact" constant="100"/>
+                                <variation key="heightClass=compact-widthClass=regular" constant="100"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="100"/>
+                                <variation key="heightClass=regular-widthClass=regular" constant="100"/>
+                            </constraint>
+                            <constraint firstItem="fTs-gp-Sjh" firstAttribute="trailing" secondItem="tij-QK-ABD" secondAttribute="trailing" constant="17" id="PhQ-we-lm5">
+                                <variation key="heightClass=compact-widthClass=compact" constant="17"/>
+                                <variation key="heightClass=compact-widthClass=regular" constant="17"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="17"/>
+                                <variation key="heightClass=regular-widthClass=regular" constant="17"/>
+                            </constraint>
+                            <constraint firstItem="tij-QK-ABD" firstAttribute="leading" secondItem="fTs-gp-Sjh" secondAttribute="leading" constant="17" id="R2Z-Jj-e7W">
+                                <variation key="heightClass=compact-widthClass=compact" constant="17"/>
+                                <variation key="heightClass=compact-widthClass=regular" constant="17"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="17"/>
+                                <variation key="heightClass=regular-widthClass=regular" constant="17"/>
+                            </constraint>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fTs-gp-Sjh"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Csi-3U-Qrf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="59M-OV-M8a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4874" y="-1225"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="5ZF-3a-JF9">
+            <objects>
+                <viewController id="hYL-gq-wp3" customClass="ProfileViewController" customModule="DocMe1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3Ce-N6-cq2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="HEP-dF-qPA">
+                                <rect key="frame" x="117" y="99" width="180" height="250"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_account_circle3x.png" translatesAutoresizingMaskIntoConstraints="NO" id="0VT-Lx-X1j">
+                                        <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="Duo-HN-jNh">
+                                                <variation key="heightClass=compact-widthClass=regular" constant="80"/>
+                                                <variation key="heightClass=regular-widthClass=compact" constant="180"/>
+                                                <variation key="heightClass=regular-widthClass=regular" constant="200"/>
+                                            </constraint>
+                                            <constraint firstAttribute="width" constant="100" id="Rci-gQ-cjr">
+                                                <variation key="heightClass=compact-widthClass=regular" constant="208"/>
+                                                <variation key="heightClass=regular-widthClass=compact" constant="180"/>
+                                                <variation key="heightClass=regular-widthClass=regular" constant="500"/>
+                                            </constraint>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ntq-L2-qna">
+                                        <rect key="frame" x="0.0" y="180" width="180" height="70"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=compact-widthClass=compact">
+                                            <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                        </variation>
+                                        <variation key="heightClass=compact-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="37"/>
+                                        </variation>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="0VT-Lx-X1j" secondAttribute="trailing" id="9wO-Gl-VCa"/>
+                                    <constraint firstItem="0VT-Lx-X1j" firstAttribute="top" secondItem="HEP-dF-qPA" secondAttribute="top" id="MWc-Lu-cKI"/>
+                                    <constraint firstAttribute="width" constant="300" id="fSY-iF-bH7">
+                                        <variation key="heightClass=compact-widthClass=regular" constant="208"/>
+                                        <variation key="heightClass=regular-widthClass=compact" constant="180"/>
+                                        <variation key="heightClass=regular-widthClass=regular" constant="500"/>
+                                    </constraint>
+                                    <constraint firstItem="0VT-Lx-X1j" firstAttribute="leading" secondItem="HEP-dF-qPA" secondAttribute="leading" id="kbG-Aa-iUv"/>
+                                    <constraint firstAttribute="height" constant="150" id="t6O-j0-37U">
+                                        <variation key="heightClass=compact-widthClass=regular" constant="150"/>
+                                        <variation key="heightClass=regular-widthClass=compact" constant="250"/>
+                                        <variation key="heightClass=regular-widthClass=regular" constant="300"/>
+                                    </constraint>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="HEP-dF-qPA" firstAttribute="leading" secondItem="Wtx-rn-sAZ" secondAttribute="leading" constant="300" id="5q6-Nr-cbE">
+                                <variation key="heightClass=compact-widthClass=regular" constant="300"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="117"/>
+                                <variation key="heightClass=regular-widthClass=regular" constant="262"/>
+                            </constraint>
+                            <constraint firstItem="HEP-dF-qPA" firstAttribute="top" secondItem="Wtx-rn-sAZ" secondAttribute="top" constant="55" id="OPI-q5-pH8">
+                                <variation key="heightClass=compact-widthClass=regular" constant="40"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="55"/>
+                                <variation key="heightClass=regular-widthClass=regular" constant="130"/>
+                            </constraint>
+                            <constraint firstItem="Wtx-rn-sAZ" firstAttribute="trailing" secondItem="HEP-dF-qPA" secondAttribute="trailing" constant="300" id="xg5-U0-bvI">
+                                <variation key="heightClass=compact-widthClass=regular" constant="300"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="117"/>
+                                <variation key="heightClass=regular-widthClass=regular" constant="262"/>
+                            </constraint>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Wtx-rn-sAZ"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="user" landscapeImage="user" id="QLQ-iI-iPp">
+                        <inset key="imageInsets" minX="0.0" minY="250" maxX="0.0" maxY="210"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="userName" destination="ntq-L2-qna" id="rjq-hu-xf6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j8f-VU-Vo6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3025" y="-856"/>
+        </scene>
+        <!--Tab View Controller-->
+        <scene sceneID="RYO-Pn-gVu">
+            <objects>
+                <tabBarController storyboardIdentifier="TabBarVC" id="tfG-Kd-qCZ" customClass="TabViewController" customModule="DocMe1" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="1uL-RG-V3H"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mm1-G0-yOW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <color key="selectedImageTintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="hYL-gq-wp3" kind="relationship" relationship="viewControllers" id="9Fh-S2-KK6"/>
+                        <segue destination="p5K-gC-QwR" kind="relationship" relationship="viewControllers" id="vH2-cD-lVX"/>
+                        <segue destination="Y9h-So-TNf" kind="relationship" relationship="viewControllers" id="GmG-vP-NPJ"/>
+                        <segue destination="Ssh-bd-dSP" kind="relationship" relationship="viewControllers" id="TkG-ME-uJ0"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tc1-Hg-ifn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2968.115942028986" y="55.580357142857139"/>
+        </scene>
+        <!--Sign Up View Controller-->
+        <scene sceneID="2Ro-0K-tvr">
+            <objects>
+                <viewController id="CO0-jX-ptB" customClass="SignUpViewController" customModule="DocMe1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nsu-rC-Z2c">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="PQu-v7-Hvw">
+                                <rect key="frame" x="50" y="154" width="314" height="325"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" id="sgW-PE-HCS">
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="42.5"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <variation key="heightClass=compact-widthClass=compact">
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        </variation>
+                                        <variation key="heightClass=compact-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        </variation>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2kw-IA-mMK">
+                                        <rect key="frame" x="0.0" y="68.5" width="314" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <variation key="heightClass=compact-widthClass=compact">
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        </variation>
+                                        <variation key="heightClass=compact-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        </variation>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oVP-JL-Q3c">
+                                        <rect key="frame" x="0.0" y="128.5" width="314" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <variation key="heightClass=compact-widthClass=compact">
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        </variation>
+                                        <variation key="heightClass=compact-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        </variation>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lfr-v7-0bF">
+                                        <rect key="frame" x="0.0" y="188.5" width="314" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <variation key="heightClass=compact-widthClass=compact">
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        </variation>
+                                        <variation key="heightClass=compact-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        </variation>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VG3-9Z-J5V">
+                                        <rect key="frame" x="0.0" y="248.5" width="314" height="30"/>
+                                        <state key="normal" title="Sign Up"/>
+                                        <variation key="heightClass=compact-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="signUpTapped:" destination="CO0-jX-ptB" eventType="touchUpInside" id="Kzd-id-1LJ"/>
+                                            <segue destination="tfG-Kd-qCZ" kind="show" id="TRX-ap-l01"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4bh-Qg-d5M">
+                                        <rect key="frame" x="0.0" y="304.5" width="314" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="325" id="9QO-3Z-1LM">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="325"/>
+                                        <variation key="heightClass=regular-widthClass=regular" constant="325"/>
+                                    </constraint>
+                                    <constraint firstItem="VG3-9Z-J5V" firstAttribute="height" secondItem="Lfr-v7-0bF" secondAttribute="height" multiplier="0.882353" id="9XO-5R-u0Z"/>
+                                    <constraint firstItem="oVP-JL-Q3c" firstAttribute="height" secondItem="2kw-IA-mMK" secondAttribute="height" id="LI6-E4-yi1"/>
+                                    <constraint firstItem="2kw-IA-mMK" firstAttribute="height" secondItem="sgW-PE-HCS" secondAttribute="height" multiplier="0.8" id="NRz-g1-1Pj"/>
+                                    <constraint firstItem="2kw-IA-mMK" firstAttribute="top" secondItem="sgW-PE-HCS" secondAttribute="bottom" constant="26" id="Vzr-Fm-MLU"/>
+                                    <constraint firstAttribute="width" constant="250" id="kZ3-3C-rO2">
+                                        <variation key="heightClass=compact-widthClass=regular" constant="500"/>
+                                        <variation key="heightClass=regular-widthClass=compact" constant="314"/>
+                                        <variation key="heightClass=regular-widthClass=regular" constant="500"/>
+                                    </constraint>
+                                    <constraint firstItem="Lfr-v7-0bF" firstAttribute="height" secondItem="oVP-JL-Q3c" secondAttribute="height" id="q5g-sT-fpQ"/>
+                                </constraints>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YpX-ro-GwO">
+                                <rect key="frame" x="117" y="44" width="180" height="102"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="102" id="6ht-xU-JLF"/>
+                                    <constraint firstAttribute="width" constant="180" id="pEG-bv-bd3">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="180"/>
+                                    </constraint>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="PQu-v7-Hvw" firstAttribute="top" secondItem="AC6-Eq-wsv" secondAttribute="top" constant="130" id="4aG-TA-pBd">
+                                <variation key="heightClass=compact-widthClass=compact" constant="90"/>
+                                <variation key="heightClass=compact-widthClass=regular" constant="105"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="110"/>
+                                <variation key="heightClass=regular-widthClass=regular" constant="120"/>
+                            </constraint>
+                            <constraint firstItem="AC6-Eq-wsv" firstAttribute="trailing" secondItem="YpX-ro-GwO" secondAttribute="trailing" constant="117" id="7J6-aK-3Me">
+                                <variation key="heightClass=regular-widthClass=compact" constant="117"/>
+                            </constraint>
+                            <constraint firstItem="PQu-v7-Hvw" firstAttribute="leading" secondItem="AC6-Eq-wsv" secondAttribute="leading" constant="30" id="LIW-Oy-e5f">
+                                <variation key="heightClass=compact-widthClass=compact" constant="208"/>
+                                <variation key="heightClass=compact-widthClass=regular" constant="242"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                                <variation key="heightClass=regular-widthClass=regular" constant="262"/>
+                            </constraint>
+                            <constraint firstItem="YpX-ro-GwO" firstAttribute="leading" secondItem="AC6-Eq-wsv" secondAttribute="leading" constant="117" id="ZUL-lu-9Lc">
+                                <variation key="heightClass=regular-widthClass=compact" constant="117"/>
+                            </constraint>
+                            <constraint firstAttribute="trailing" secondItem="PQu-v7-Hvw" secondAttribute="trailing" constant="20" id="cha-t6-Zrr">
+                                <variation key="heightClass=compact-widthClass=compact" constant="209"/>
+                                <variation key="heightClass=compact-widthClass=regular" constant="198"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                                <variation key="heightClass=regular-widthClass=regular" constant="262"/>
+                            </constraint>
+                            <constraint firstItem="YpX-ro-GwO" firstAttribute="top" secondItem="AC6-Eq-wsv" secondAttribute="top" id="rjU-98-wk2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="AC6-Eq-wsv"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Bjy-bA-hS3"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="oVP-JL-Q3c" id="Frd-bp-ylN"/>
+                        <outlet property="errorLabel" destination="4bh-Qg-d5M" id="IHg-Mp-N4O"/>
+                        <outlet property="firstNameTextField" destination="sgW-PE-HCS" id="CEm-z7-Xrl"/>
+                        <outlet property="lastNameTextField" destination="2kw-IA-mMK" id="bFY-ma-IgO"/>
+                        <outlet property="passwordTextField" destination="Lfr-v7-0bF" id="IHT-h2-t6z"/>
+                        <outlet property="profPic" destination="YpX-ro-GwO" id="mon-2K-e4R"/>
+                        <outlet property="signUpButton" destination="VG3-9Z-J5V" id="XWA-zk-gC1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Rl-iT-Mcr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2089.8550724637685" y="382.36607142857139"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="2Os-Nc-1E9">
+            <objects>
+                <viewController id="Ssh-bd-dSP" customClass="SettingsViewController" customModule="DocMe1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HVm-Yw-Z1T">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="bvg-an-LWg">
+                                <rect key="frame" x="20" y="64" width="374" height="50.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2oQ-Q6-rQv">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=compact-widthClass=compact">
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        </variation>
+                                        <variation key="heightClass=compact-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                        </variation>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="19B-om-Eus">
+                                        <rect key="frame" x="0.0" y="20.5" width="374" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" title="Log Out">
+                                            <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <variation key="heightClass=compact-widthClass=compact">
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        </variation>
+                                        <variation key="heightClass=compact-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="logOutBtnTapped:" destination="Ssh-bd-dSP" eventType="touchUpInside" id="oNo-FM-Gtn"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="627" id="Xvp-pK-LzD">
+                                        <variation key="heightClass=compact-widthClass=compact" constant="627"/>
+                                        <variation key="heightClass=regular-widthClass=compact" constant="374"/>
+                                    </constraint>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="bvg-an-LWg" firstAttribute="top" secondItem="ZWk-xO-ZdD" secondAttribute="top" constant="20" id="6oR-nk-gBo">
+                                <variation key="heightClass=compact-widthClass=compact" constant="20"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="20"/>
+                            </constraint>
+                            <constraint firstItem="bvg-an-LWg" firstAttribute="leading" secondItem="ZWk-xO-ZdD" secondAttribute="leading" constant="20" id="WrB-RO-kDA">
+                                <variation key="heightClass=compact-widthClass=compact" constant="20"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="20"/>
+                            </constraint>
+                            <constraint firstItem="ZWk-xO-ZdD" firstAttribute="trailing" secondItem="bvg-an-LWg" secondAttribute="trailing" constant="20" id="zZh-lV-Zaw">
+                                <variation key="heightClass=compact-widthClass=compact" constant="20"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="20"/>
+                            </constraint>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZWk-xO-ZdD"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="gear" id="xpo-xz-G7e">
+                        <inset key="imageInsets" minX="0.0" minY="250" maxX="0.0" maxY="210"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="logOutBtn" destination="19B-om-Eus" id="L6B-0V-xLv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ewT-KQ-i7f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3238" y="856"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="f1t-Hd-SRN">
+            <objects>
+                <viewController id="bhV-Pj-ZPe" customClass="LoginViewController" customModule="DocMe1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0nk-Ts-Kv9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="RPF-c5-VJX">
+                                <rect key="frame" x="50" y="135" width="314" height="200.5"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ofm-zD-qJE">
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <variation key="heightClass=compact-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        </variation>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jxm-CT-pPt">
+                                        <rect key="frame" x="0.0" y="60" width="314" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <variation key="heightClass=compact-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        </variation>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kyg-MP-8OX">
+                                        <rect key="frame" x="0.0" y="120" width="314" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="H3L-hZ-Fdl"/>
+                                        </constraints>
+                                        <state key="normal" title="Login"/>
+                                        <connections>
+                                            <action selector="loginTapped:" destination="bhV-Pj-ZPe" eventType="touchUpInside" id="8dZ-sc-sZ0"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nrl-em-lzN">
+                                        <rect key="frame" x="0.0" y="180" width="314" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="kyg-MP-8OX" firstAttribute="height" secondItem="ofm-zD-qJE" secondAttribute="height" id="3td-Xd-696"/>
+                                    <constraint firstAttribute="width" constant="708" id="CNn-Gh-PE6">
+                                        <variation key="heightClass=compact-widthClass=regular" constant="500"/>
+                                        <variation key="heightClass=regular-widthClass=compact" constant="314"/>
+                                        <variation key="heightClass=regular-widthClass=regular" constant="708"/>
+                                    </constraint>
+                                    <constraint firstItem="Jxm-CT-pPt" firstAttribute="height" secondItem="ofm-zD-qJE" secondAttribute="height" id="iIZ-tT-OOi"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="RPF-c5-VJX" firstAttribute="top" secondItem="VEQ-NT-WZU" secondAttribute="top" constant="50" id="1vb-iw-qW6">
+                                <variation key="heightClass=compact-widthClass=compact" constant="50"/>
+                                <variation key="heightClass=compact-widthClass=regular" constant="107"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                                <variation key="heightClass=regular-widthClass=regular" constant="50"/>
+                            </constraint>
+                            <constraint firstAttribute="trailing" secondItem="RPF-c5-VJX" secondAttribute="trailing" constant="711.5" id="Zii-sT-SSf">
+                                <variation key="heightClass=compact-widthClass=compact" constant="50"/>
+                                <variation key="heightClass=compact-widthClass=regular" constant="198"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                                <variation key="heightClass=regular-widthClass=regular" constant="50"/>
+                            </constraint>
+                            <constraint firstItem="RPF-c5-VJX" firstAttribute="leading" secondItem="VEQ-NT-WZU" secondAttribute="leading" constant="50" id="nw1-oK-kQ7">
+                                <variation key="heightClass=compact-widthClass=compact" constant="50"/>
+                                <variation key="heightClass=compact-widthClass=regular" constant="242"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                                <variation key="heightClass=regular-widthClass=regular" constant="50"/>
+                            </constraint>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VEQ-NT-WZU"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="e1Q-da-14S"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="ofm-zD-qJE" id="vjc-W2-Y8J"/>
+                        <outlet property="errorLabel" destination="Nrl-em-lzN" id="Qj8-Rz-LDT"/>
+                        <outlet property="loginButton" destination="kyg-MP-8OX" id="4M0-Jx-dDd"/>
+                        <outlet property="passwordTextField" destination="Jxm-CT-pPt" id="CZt-um-RJ7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qUQ-jh-K7A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2089.8550724637685" y="-422.54464285714283"/>
+        </scene>
+        <!--Navigation View Controller-->
+        <scene sceneID="JdJ-ep-X4f">
+            <objects>
+                <navigationController storyboardIdentifier="NavigationVC" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="mJU-Dv-AvF" customClass="UINavigationViewController" customModule="DocMe1" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="M8l-b5-tXJ">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Wwg-bU-lAW">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Ck9-lK-GTL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CBN-dR-TI9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="391" y="-84"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="YbJ-Qa-rmh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="p5K-gC-QwR" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="article" id="blB-un-ujh">
+                        <inset key="imageInsets" minX="0.0" minY="250" maxX="0.0" maxY="210"/>
+                        <color key="badgeColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="lc8-mG-jey">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="LDB-it-ZDT" kind="relationship" relationship="rootViewController" id="pxb-v6-xOM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dVz-6L-WhS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Y3D-nX-YWQ">
+                    <rect key="frame" x="0.0" y="0.0" width="990" height="600"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lwN-ku-4Xf">
+                            <rect key="frame" x="0.0" y="0.0" width="990" height="210"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="health2.png" translatesAutoresizingMaskIntoConstraints="NO" id="HNv-xn-eif">
+                                    <rect key="frame" x="0.0" y="0.0" width="170" height="210"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="170" id="knw-xO-2Nh">
+                                            <variation key="heightClass=regular-widthClass=compact" constant="170"/>
+                                            <variation key="heightClass=regular-widthClass=regular" constant="200"/>
+                                        </constraint>
+                                        <constraint firstAttribute="height" constant="95" id="m9j-Hg-I0D">
+                                            <variation key="heightClass=regular-widthClass=compact" constant="95"/>
+                                            <variation key="heightClass=regular-widthClass=regular" constant="210"/>
+                                        </constraint>
+                                    </constraints>
+                                </imageView>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="How to make your day abit healthier" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5B9-Jz-afe">
+                                    <rect key="frame" x="170" y="0.0" width="820" height="210"/>
+                                    <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="210" id="5Gf-m8-m1b">
+                                            <variation key="heightClass=regular-widthClass=compact" constant="210"/>
+                                            <variation key="heightClass=regular-widthClass=regular" constant="790"/>
+                                        </constraint>
+                                        <constraint firstAttribute="height" constant="95" id="Yxa-Qe-YaR">
+                                            <variation key="heightClass=regular-widthClass=compact" constant="95"/>
+                                            <variation key="heightClass=regular-widthClass=regular" constant="210"/>
+                                        </constraint>
+                                    </constraints>
+                                    <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                    <fontDescription key="fontDescription" type="italicSystem" pointSize="19"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    <variation key="heightClass=regular-widthClass=regular">
+                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="35"/>
+                                    </variation>
+                                </textView>
+                            </subviews>
+                        </stackView>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1HW-yQ-D0r">
+                            <rect key="frame" x="0.0" y="210" width="990" height="390"/>
+                            <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="390" id="PHw-Vi-AZp">
+                                    <variation key="heightClass=regular-widthClass=compact" constant="390"/>
+                                    <variation key="heightClass=regular-widthClass=regular" constant="390"/>
+                                </constraint>
+                                <constraint firstAttribute="width" constant="380" id="zlP-Em-Gqv">
+                                    <variation key="heightClass=regular-widthClass=compact" constant="380"/>
+                                </constraint>
+                            </constraints>
+                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                            <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="990" id="50n-vx-OYi">
+                            <variation key="heightClass=regular-widthClass=compact" constant="380"/>
+                            <variation key="heightClass=regular-widthClass=regular" constant="990"/>
+                        </constraint>
+                        <constraint firstItem="lwN-ku-4Xf" firstAttribute="top" secondItem="Y3D-nX-YWQ" secondAttribute="top" id="DF1-hS-ugg"/>
+                        <constraint firstAttribute="trailing" secondItem="lwN-ku-4Xf" secondAttribute="trailing" id="Oim-XV-duU"/>
+                        <constraint firstAttribute="height" constant="600" id="P4e-pl-jQ7">
+                            <variation key="heightClass=regular-widthClass=compact" constant="485"/>
+                            <variation key="heightClass=regular-widthClass=regular" constant="600"/>
+                        </constraint>
+                        <constraint firstItem="lwN-ku-4Xf" firstAttribute="leading" secondItem="Y3D-nX-YWQ" secondAttribute="leading" id="hQ2-jh-hel"/>
+                        <constraint firstItem="lwN-ku-4Xf" firstAttribute="leading" secondItem="Y3D-nX-YWQ" secondAttribute="leading" id="o5D-iE-YDz"/>
+                        <constraint firstItem="lwN-ku-4Xf" firstAttribute="top" secondItem="Y3D-nX-YWQ" secondAttribute="top" id="stI-x4-Leb"/>
+                        <constraint firstAttribute="trailing" secondItem="lwN-ku-4Xf" secondAttribute="trailing" id="yEt-Jm-uTS"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="ewO-4V-Rrz"/>
+                </stackView>
+            </objects>
+            <point key="canvasLocation" x="3918.8405797101454" y="-423.21428571428572"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="t9V-pm-CbH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Y9h-So-TNf" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="logo-1" id="tTb-QB-0Om">
+                        <inset key="imageInsets" minX="0.0" minY="250" maxX="0.0" maxY="210"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SB4-qj-afx">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Tiy-LZ-3h5" kind="relationship" relationship="rootViewController" id="yz6-TZ-RWK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s7B-8e-g7F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3918.8405797101454" y="245.75892857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="article" width="512" height="512"/>
+        <image name="gear" width="512" height="512"/>
+        <image name="health" width="224" height="280"/>
+        <image name="health2" width="860" height="900"/>
+        <image name="health2.png" width="860" height="900"/>
+        <image name="ic_account_circle3x.png" width="180" height="180"/>
+        <image name="logo-1" width="717" height="512"/>
+        <image name="user" width="512" height="512"/>
+    </resources>
 </document>

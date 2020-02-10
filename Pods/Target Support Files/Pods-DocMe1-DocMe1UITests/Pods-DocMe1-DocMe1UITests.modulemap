@@ -1,0 +1,6 @@
+framework module Pods_DocMe1_DocMe1UITests {
+  umbrella header "Pods-DocMe1-DocMe1UITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

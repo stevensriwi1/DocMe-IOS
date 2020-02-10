@@ -9,57 +9,76 @@
 import UIKit
 import FirebaseUI
 import GoogleSignIn
+import AVKit
 
 class ViewController: UIViewController {
 
+    var videoPlayer:AVPlayer?
+    
+    var videoPlayerLayer:AVPlayerLayer?
+    
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var signUpButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-    }
-    @IBAction func LoginButton(_ sender: UIButton) {
         
-        //get default auth UI object
-        let authUI = FUIAuth.defaultAuthUI();        guard authUI != nil else
+        setUpElements()
+        
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        //set up video in background
+        setUpVideo()
+    }
+    func setUpElements()
+    {
+        Utilities.styleFilledButton(signUpButton)
+        Utilities.styleHollowButton(loginButton)
+        
+    }
+    func setUpVideo()
+    {
+        //get the path to the resource in the bundle
+        let bundlePath = Bundle.main.path(forResource: "video", ofType: "mp4")
+        
+        guard bundlePath != nil else
         {
-            //log the error
             return
+            
         }
-        /*
-        let providers: [FUIAuthProvider] = [
-          FUIEmailAuth(),
-          FUIGoogleAuth(),
-          FUIFacebookAuth(),
-        ]
-        self.authUI?.providers = providers
-        */
+        //create a URL from it
+        let url = URL(fileURLWithPath: bundlePath!)
         
-        //set ourselves as the delegate
-        authUI?.delegate = self
-        authUI?.providers = [FUIEmailAuth()]
+        //create the video player item
+        let item = AVPlayerItem(url:url)
+        
+        //create the player
+        videoPlayer = AVPlayer(playerItem: item)
         
         
-        //get a reference to the  auth UI view controller
-        let authViewController = authUI!.authViewController();
+        //create the layer
+        videoPlayerLayer=AVPlayerLayer(player: videoPlayer!)
         
-        //show it
-        present(authViewController, animated: true, completion: nil);
         
+        //adjust the size and frame
+        videoPlayerLayer?.frame = CGRect(x: -self.view.frame.size.width*0.7, y: 0, width: self.view.frame.size.width*4, height: self.view.frame.size.height)
+        
+        view.layer.insertSublayer(videoPlayerLayer!, at: 0)
+        
+        // Add it to the view and play it
+        videoPlayer?.playImmediately(atRate: 0.3)
     }
-
-}
-
-extension ViewController:FUIAuthDelegate {
+    func transitionToHome()
+    {
+        //reference to Home View Cotroller
+        let tabViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.tabController) as? TabViewController
+        
+        view.window?.rootViewController = tabViewController
+        view.window?.makeKeyAndVisible()
+    }
     
-    func authUI(_ authUI: FUIAuth, didSignInWith authDataResult: AuthDataResult?, error: Error?) {
-        //check if there was an erroe
-        
-        if error != nil{
-            //log error
-            return;
-        }
-        //authDataResult?.user.uid;
-        
-        performSegue(withIdentifier: "goToHome", sender: self);
-    }
+    
 }

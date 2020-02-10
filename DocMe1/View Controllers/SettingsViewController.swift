@@ -7,24 +7,36 @@
 //
 
 import UIKit
+import Firebase
 
 class SettingsViewController: UIViewController {
 
+    @IBOutlet weak var logOutBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+    @IBAction func logOutBtnTapped(_ sender: Any) {
+        handleLogout()
+        
+    }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func handleLogout()
+    {
+        //will try to do the following, because sometimes it gives an error
+        do {
+            try Auth.auth().signOut()
+        }
+        catch let logoutError
+        {
+            print(logoutError)
+        }
+        //reference to View Cotroller
+        let navigationViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.navigationViewController) as? UINavigationViewController
+        
+        view.window?.rootViewController = navigationViewController
+        view.window?.makeKeyAndVisible()
     }
-    */
-
 }
