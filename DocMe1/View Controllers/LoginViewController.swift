@@ -27,8 +27,28 @@ class LoginViewController: UIViewController {
         
         setUpElements()
     }
+    func validateFields() -> String?
+    {
+        //check that all fields are filled in
+        
+        if emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""
+        {
+            return "Please fill in all the fields"
+        }
+         //check if the password is valid or secure
+        let cleanedPassword = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        if Utilities.isPasswordValid(cleanedPassword) == false
+        {
+            //password is not secure enough
+            return "Please make sure your password is at least 8 characters, contains a special character and a number"
+        }
+        
+        return nil
+    }
     func setUpElements()
     {
+        errorLabel.alpha = 0
         Utilities.styleTextField(emailTextField)
         Utilities.styleTextField(passwordTextField)
         Utilities.styleFilledButton(loginButton)
@@ -58,6 +78,11 @@ class LoginViewController: UIViewController {
                 self.transitionToHome()
             }
         }
+    }
+    func showError(_ message:String)
+    {
+        errorLabel.text = message
+        errorLabel.alpha = 1
     }
     func transitionToHome()
     {
